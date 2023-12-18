@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    color: lightskyblue;
+    font-size: 15px;
+  }
+
+  h1 {
+    color: lightseagreen;
+
+  }
+
+  p {
+    color: purple;
+    font-size: 15px;
+  }
+</style>
+
+<body>
+  <script>
+    let arr = ['宫保鸡丁', '鱼香肉丝', '麻婆豆腐', '糖醋里脊', '干煸四季豆', '锅包肉', '鱼香茄子', '红烧鱼', '蒸鲈鱼', '红烧排骨', '木须肉', '青瓜火腿']
+    // document.write(`<h4>全部菜单: 宫保鸡丁, 鱼香肉丝, 麻婆豆腐, 糖醋里脊, 干煸四季豆, 锅包肉, 红烧鱼, 蒸鲈鱼, 红烧排骨, 木须肉, 青瓜火腿, 鱼香茄子</h4><br>`)
+    // document.write('<h5>全部菜单</h5>' + arr)
+    document.write(`<h1>全部菜单</h1>${arr}`)
+    // for (let i = 0; i < arr.length; i++) {
+    // document.write(`${arr[i]} `)
+    // }
+    // document.write(arr)
+    for (let i = 1; i <= 5; i++) {
+      let random = Math.floor(Math.random() * arr.length)
+      menu = arr[random]
+      document.write(`<p>第${i}天: ${menu}</p>`)
+
+      arr.splice(random, 1)
+    }
+  </script>
+</body>
+
+</html>
